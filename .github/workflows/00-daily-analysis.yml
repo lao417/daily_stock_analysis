@@ -2,11 +2,9 @@ name: 每日股票分析
 
 on:
   schedule:
-    # 北京时间 15:30 (A股收盘后)
     - cron: '30 7 * * 1-5'
-    # 北京时间 次日凌晨 4:30 (美股收盘后)
     - cron: '30 20 * * 0-4'
-workflow_dispatch:
+  workflow_dispatch:
     inputs:
       mode:
         description: '运行模式'
